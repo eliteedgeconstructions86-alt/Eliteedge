@@ -60,16 +60,23 @@ nav a:hover {
 
 /* Logo */
 .brand {
-  display:flex;
-  align-items:center;
-  gap:10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .logo {
-  height:55px;
-  background:white;
-  padding:5px;
-  border-radius:5px;
+  height: 75px;
+  width: auto;
+  object-fit: contain;
+  padding: 5px;
+  background: white;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .brand-text h2 {
