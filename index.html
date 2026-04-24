@@ -90,6 +90,15 @@ nav a:hover { color:#f4b400; }
     url('background.jpg') center/cover no-repeat;
 }
 
+.hero {
+  animation: zoomBg 20s infinite alternate;
+}
+
+@keyframes zoomBg {
+  from { background-size: 100%; }
+  to { background-size: 110%; }
+}
+  
 .hero-content {
   max-width: 700px;
   padding: 20px;
