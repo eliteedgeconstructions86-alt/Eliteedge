@@ -191,10 +191,16 @@ nav a:hover { color:#f4b400; }
   position: relative;
 }
 
-section {
-  scroll-margin-top: 90px;  /* ✅ ADD HERE */
+.section {
+  scroll-margin-top: 110px;
 }
 
+/* Mobile fix */
+@media (max-width: 768px) {
+  .section {
+    scroll-margin-top: 170px;
+  }
+}
   
 .section h2::after {
   content: "";
