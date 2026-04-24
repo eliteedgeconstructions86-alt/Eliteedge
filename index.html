@@ -248,6 +248,11 @@ footer {
     align-items: center;
   }
 
+header {
+  width: 100%;
+  box-sizing: border-box;
+}
+  
   /* BRAND */
   .brand {
     flex-direction: column;
@@ -266,25 +271,27 @@ footer {
     font-size: 13px;
   }
 
-  /* NAV FIX (NO JUMPING) */
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
+/* NAV FIX (PERFECT ALIGNMENT) */
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
-  nav a {
-    margin: 8px 0;
-    font-size: 14px;
-  }
+/* ALL NAV LINKS SAME WIDTH */
+nav a {
+  width: 80%;
+  text-align: center;
+  margin: 6px 0;
+}
 
-  /* BROCHURE BUTTON PERFECT ALIGN */
-  .brochure-btn {
-    margin-top: 10px;
-    width: 80%;
-    text-align: center;
-  }
+/* BROCHURE BUTTON FIX */
+.brochure-btn {
+  width: 80%;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
 
   /* HERO */
   .hero {
