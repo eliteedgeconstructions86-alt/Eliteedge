@@ -203,6 +203,17 @@ nav a:hover { color:#f4b400; }
   background:#f7f7f7;
 }
 
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+  
 /* SERVICES */
 .services {
   display:grid;
@@ -365,6 +376,18 @@ nav a {
     width: 95%;
   }
 }
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s ease;
+  }
+
+  .fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
 </style>
 
 </head>
@@ -408,7 +431,7 @@ nav a {
   </div>
 </section>
 
-<section class="section" id="services">
+<section class="section fade-up" id="services">
 <h2>Our Services</h2>
 
 <div class="services">
@@ -422,7 +445,7 @@ nav a {
 </div>
 </section>
 
-<section class="section">
+<section class="section fade-up">
 <h2>Why Choose Us</h2>
 <p>✔ Experienced Team</p>
 <p>✔ Quality Materials</p>
