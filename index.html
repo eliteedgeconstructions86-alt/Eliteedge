@@ -273,7 +273,37 @@ form input, form textarea {
   text-decoration:none;
 }
 
-.whatsapp { bottom:70px; background:green; }
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 65px;
+  height: 65px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+/* ICON */
+.whatsapp img {
+  width: 35px;
+  height: 35px;
+}
+
+/* HOVER EFFECT */
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/* CLICK EFFECT */
+.whatsapp:active {
+  transform: scale(0.95);
+}
 .call { bottom:20px; background:#1e2a38; }
 
 /* FOOTER */
