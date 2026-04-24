@@ -280,6 +280,41 @@ footer {
   padding:20px;
 }
 
+   .project-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  .project-item img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    transition: 0.4s;
+  }
+
+  .project-item:hover img {
+    transform: scale(1.1);
+  }
+
+  .overlay-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  .project-item:hover .overlay-text {
+    opacity: 1;
+  }
+
+</style>
 
  /* ===== FINAL MOBILE FIX (CLEAN) ===== */
 @media(max-width:768px){
