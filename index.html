@@ -237,30 +237,8 @@ footer {
   padding:20px;
 }
 
-@media(max-width:768px){
 
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .brochure-btn {
-    margin: 10px 0 0 0;
-    display: block;
-    text-align: center;
-  }
-
-}
-
-  
-  @media(max-width:768px){
-  .hero-logo {
-    width: 220px;
-  }
-}
-
-  /* ===== MOBILE RESPONSIVE FIX ===== */
+ /* ===== FINAL MOBILE FIX (CLEAN) ===== */
 @media(max-width:768px){
 
   /* HEADER */
@@ -270,27 +248,42 @@ footer {
     align-items: center;
   }
 
-  nav {
-    margin-top: 10px;
-  }
-
-  nav a {
-    margin: 8px;
-    font-size: 14px;
-  }
-
-  /* LOGO */
-  .logo {
-    height: 60px;
-  }
-
-  .brand-text h2 {
-    font-size: 18px;
+  /* BRAND */
+  .brand {
+    flex-direction: column;
     text-align: center;
   }
 
+  .logo {
+    height: 65px;
+  }
+
+  .brand-text h2 {
+    font-size: 20px;
+  }
+
   .brand-text span {
-    font-size: 12px;
+    font-size: 13px;
+  }
+
+  /* NAV FIX (NO JUMPING) */
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav a {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  /* BROCHURE BUTTON PERFECT ALIGN */
+  .brochure-btn {
+    margin-top: 10px;
+    width: 80%;
+    text-align: center;
   }
 
   /* HERO */
@@ -299,34 +292,26 @@ footer {
     padding: 60px 15px;
   }
 
+  .hero-logo {
+    width: 200px;
+  }
+
   .hero-content h1 {
     font-size: 24px;
-    line-height: 1.4;
   }
 
   .hero-content p {
     font-size: 14px;
   }
 
-  /* BIG HERO LOGO */
-  .hero-logo {
-    width: 180px;
-  }
-
-  /* TAGLINE */
-  .tagline {
-    font-size: 16px;
-  }
-
-  /* BUTTONS STACK */
+  /* BUTTON STACK */
   .hero-buttons {
     flex-direction: column;
-    gap: 10px;
+    width: 100%;
   }
 
   .btn {
     width: 100%;
-    text-align: center;
   }
 
   /* GALLERY */
@@ -338,7 +323,6 @@ footer {
   form input, form textarea {
     width: 95%;
   }
-
 }
 </style>
 
