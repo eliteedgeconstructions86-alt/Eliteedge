@@ -487,5 +487,19 @@ nav a {
 <p>© 2026 Elite Edge Constructions | Chennai</p>
 </footer>
 
+<script>
+const faders = document.querySelectorAll('.fade-up');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+faders.forEach(el => observer.observe(el));
+</script>
+  
 </body>
 </html>
