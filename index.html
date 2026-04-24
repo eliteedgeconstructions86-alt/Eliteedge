@@ -320,22 +320,18 @@ footer {
 
  
 
- /* ===== FINAL MOBILE FIX (CLEAN) ===== */
-
-   @media(max-width:768px){
+/* ===== FINAL MOBILE FIX ===== */
+@media(max-width:768px){
 
   /* HEADER */
   header {
     padding: 10px 15px;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
   }
 
-header {
-  width: 100%;
-  box-sizing: border-box;
-}
-  
   /* BRAND */
   .brand {
     flex-direction: column;
@@ -354,27 +350,26 @@ header {
     font-size: 13px;
   }
 
-/* NAV FIX (PERFECT ALIGNMENT) */
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
+  /* NAV */
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 
-/* ALL NAV LINKS SAME WIDTH */
-nav a {
-  width: 80%;
-  text-align: center;
-  margin: 6px 0;
-}
+  nav a {
+    width: 80%;
+    text-align: center;
+    margin: 6px 0;
+  }
 
-/* BROCHURE BUTTON FIX */
-.brochure-btn {
-  width: 80%;
-  margin: 10px 0 0 0;
-  text-align: center;
-}
+  /* BROCHURE */
+  .brochure-btn {
+    width: 80%;
+    margin-top: 10px;
+    text-align: center;
+  }
 
   /* HERO */
   .hero {
@@ -394,7 +389,7 @@ nav a {
     font-size: 14px;
   }
 
-  /* BUTTON STACK */
+  /* BUTTONS */
   .hero-buttons {
     flex-direction: column;
     width: 100%;
@@ -408,11 +403,13 @@ nav a {
   .gallery img {
     height: 180px;
   }
-   }
+
   /* FORM */
-  form input, form textarea {
+  form input,
+  form textarea {
     width: 95%;
   }
+
 }
 
 .fade-up {
