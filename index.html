@@ -75,7 +75,7 @@ header.shrink .nav a {
   font-size: 14px;
 }
   
-nav a::after {
+.nav a::after {
   content:"";
   position:absolute;
   width:0%;
@@ -83,7 +83,7 @@ nav a::after {
   left:0;
   bottom:-5px;
   background:#f4b400;
-  transition:0.3s;
+  transition:0.4s ease;
 }
 
 nav a:hover::after { width:100%; }
