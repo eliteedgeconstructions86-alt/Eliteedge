@@ -459,70 +459,75 @@ footer {
  
 
 /* ===== FINAL MOBILE FIX ===== */
-@media(max-width:768px){
+@media (max-width: 768px){
 
   /* HEADER */
   header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     padding: 10px 15px;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    box-sizing: border-box;
   }
 
   /* BRAND */
   .brand {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
   }
 
   .logo {
-    height: 65px;
+    height: 55px;
   }
 
   .brand-text h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .brand-text span {
-    font-size: 13px;
+    font-size: 12px;
   }
 
-  /* NAV */
+  /* NAV - clean stacked buttons */
   nav {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
   }
 
   nav a {
-    width: 80%;
-    text-align: center;
-    margin: 6px 0;
-    font-size: 14px;
+    margin: 0;
+    padding: 6px 10px;
+    font-size: 13px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
   }
 
-  /* BROCHURE */
   .brochure-btn {
-    width: 80%;
-    margin-top: 10px;
-    text-align: center;
+    padding: 6px 12px;
   }
 
   /* HERO */
   .hero {
+    padding: 120px 15px 60px; /* push below header */
     height: auto;
-    padding: 60px 15px;
+  }
+
+  .hero-content {
+    padding: 20px;
+    border-radius: 18px;
   }
 
   .hero-logo {
-    width: 200px;
+    width: 180px;
   }
 
   .hero-content h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .hero-content p {
@@ -532,26 +537,35 @@ footer {
   /* BUTTONS */
   .hero-buttons {
     flex-direction: column;
-    width: 100%;
+    gap: 10px;
   }
 
   .btn {
     width: 100%;
+    text-align: center;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 40px 15px;
+  }
+
+  .section h2 {
+    font-size: 24px;
   }
 
   /* GALLERY */
-  .gallery img {
-    height: 180px;
+  .gallery {
+    grid-template-columns: 1fr;
   }
 
   /* FORM */
   form input,
   form textarea {
-    width: 95%;
+    width: 100%;
+    margin: 8px 0;
   }
-
 }
-
 
 
  
