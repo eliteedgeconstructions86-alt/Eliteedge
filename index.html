@@ -624,7 +624,9 @@ footer {
 
 <body>
 
-<header>
+<header class="header">
+  
+  <!-- LEFT: LOGO -->
   <div class="brand">
     <img src="logo.png" alt="Logo" class="logo">
     <div class="brand-text">
@@ -633,18 +635,18 @@ footer {
     </div>
   </div>
 
- <div class="menu-toggle" onclick="toggleMenu()">
-  ☰
-</div>
+  <!-- RIGHT: NAV -->
+  <nav id="mobileMenu" class="nav">
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="brochure.pdf" download class="brochure-btn">Brochure</a>
+  </nav>
 
-<nav id="mobileMenu">
-  <a href="#">Home</a>
-  <a href="#services">Services</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-  <a href="brochure.pdf" download class="brochure-btn">Download Brochure</a>
-</nav>
-  
+  <!-- HAMBURGER -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
 </header>
 
 
