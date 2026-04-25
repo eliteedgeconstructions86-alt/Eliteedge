@@ -90,8 +90,12 @@ nav a:hover { color:#f4b400; }
   padding: 0;
   background: transparent;
   border-radius: 8px;
+  transition: 0.3s;
 }
-
+header.shrink .logo {
+  height: 60px;
+}
+  
   /* BRAND TEXT (FIXED SIZE) */
 .brand-text h2 {
   margin: 0;
@@ -99,11 +103,21 @@ nav a:hover { color:#f4b400; }
   font-weight: bold;
   color: #fff;
   letter-spacing: 0.5px;
+   transition: 0.3s;
 }
 
 .brand-text span {
   font-size: 30px;
   color: #ddd;
+   transition: 0.3s;
+}
+
+  header.shrink .brand-text h2 {
+  font-size: 24px;
+}
+
+header.shrink .brand-text span {
+  font-size: 16px;
 }
 
 /* ===== HERO MODERN ===== */
