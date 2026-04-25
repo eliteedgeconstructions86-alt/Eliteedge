@@ -14,14 +14,14 @@ body { margin:0; font-family: Arial; }
 
 /* ===== HEADER (GLASS) ===== */
 header {
-  position: fixed;
+  position: relative;
   top: 0;
    width: 100%;
   z-index: 10;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 40px;
+  padding:15px 20px;
   background: rgba(30, 42, 56, 0.7);
   backdrop-filter: blur(10px);
   border-bottom:1px solid rgba(255,255,255,0.1);
@@ -583,12 +583,12 @@ footer {
 /* MOBILE VIEW */
 @media (max-width: 768px){
 
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-  }
+ .menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
 
   #mobileMenu {
     position: absolute;
