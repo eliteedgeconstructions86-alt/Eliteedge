@@ -677,6 +677,58 @@ line-height: 1.5;
     max-height: 400px;
   }
 }
+
+/* LIGHTBOX BACKGROUND */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+  z-index: 2000;
+}
+
+/* ACTIVE STATE */
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* IMAGE */
+.lightbox-img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 12px;
+  transform: scale(0.8);
+  transition: 0.4s ease;
+}
+
+/* ZOOM EFFECT */
+.lightbox.active .lightbox-img {
+  transform: scale(1);
+}
+
+/* CLOSE BUTTON */
+.lightbox .close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* HOVER EFFECT ON IMAGES */
+.project-item {
+  cursor: zoom-in;
+}
   
 </style>
 
