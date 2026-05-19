@@ -35,10 +35,10 @@ header{
   align-items:center;
   justify-content:space-between;
 
-  padding:12px 40px;
+  padding:12px 35px;
   box-sizing:border-box;
 
-  background:rgba(30,42,56,0.92);
+  background:rgba(30,42,56,0.94);
   backdrop-filter:blur(10px);
 
   transition:0.3s ease;
@@ -46,22 +46,20 @@ header{
 
 /* SHRINK EFFECT */
 header.shrink{
-  padding:8px 30px;
-  background:rgba(30,42,56,0.96);
-  box-shadow:0 5px 25px rgba(0,0,0,0.4);
+  padding:8px 25px;
+  background:rgba(30,42,56,0.97);
+  box-shadow:0 5px 20px rgba(0,0,0,0.35);
 }
 
-/* BRAND */
+/* LEFT SIDE */
 .brand{
   display:flex;
   align-items:center;
-  gap:14px;
-
-  min-width:0;
+  gap:12px;
 }
 
 .logo{
-  height:85px;
+  height:80px;
   width:auto;
   transition:0.3s;
 }
@@ -70,19 +68,27 @@ header.shrink .logo{
   height:60px;
 }
 
+/* BRAND TEXT */
 .brand-text h2{
   margin:0;
   font-size:28px;
+  line-height:1;
   color:#fff;
-  line-height:1.1;
 }
 
 .brand-text span{
-  font-size:15px;
   color:#ddd;
+  font-size:14px;
 }
 
-/* NAVIGATION */
+/* RIGHT SIDE */
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+/* NAV */
 .nav{
   display:flex;
   align-items:center;
@@ -127,13 +133,12 @@ header.shrink .logo{
   background:#f4b400;
   color:#000 !important;
   padding:8px 14px;
-  border-radius:30px;
+  border-radius:25px;
   font-weight:600;
 }
 
-/* PHONE NUMBER */
+/* PHONE */
 .top-contact{
-  margin-left:20px;
   white-space:nowrap;
   font-size:14px;
   font-weight:600;
@@ -162,13 +167,6 @@ header.shrink .logo{
 
   header{
     padding:10px 15px;
-    height:auto;
-    flex-wrap:wrap;
-  }
-
-  .brand{
-    width:auto;
-    gap:10px;
   }
 
   .logo{
@@ -183,11 +181,11 @@ header.shrink .logo{
     font-size:11px;
   }
 
-  /* PHONE NUMBER */
+  /* PHONE */
   .top-contact{
     position:absolute;
     right:55px;
-    top:22px;
+    top:20px;
     font-size:10px;
   }
 
@@ -197,6 +195,7 @@ header.shrink .logo{
     position:absolute;
     right:15px;
     top:15px;
+    z-index:1200;
   }
 
   /* MOBILE MENU */
@@ -224,16 +223,16 @@ header.shrink .logo{
 
   #mobileMenu a{
     width:100%;
-    padding:15px;
     text-align:center;
+    padding:15px;
     border-bottom:1px solid rgba(255,255,255,0.08);
   }
 
-  /* HERO FIX */
+  /* HERO */
   .hero{
     margin-top:90px;
-    padding:40px 15px;
     height:auto;
+    padding:40px 15px;
   }
 
   .hero-content{
@@ -264,31 +263,9 @@ header.shrink .logo{
     text-align:center;
     box-sizing:border-box;
   }
-
-  /* SECTION */
-  .section{
-    padding:50px 15px;
-  }
-
-  .section h2{
-    font-size:24px;
-  }
-
-  /* GALLERY */
-  .gallery{
-    grid-template-columns:1fr;
-  }
-
-  /* FORM */
-  form input,
-  form textarea{
-    width:100%;
-    margin:8px 0;
-    box-sizing:border-box;
-  }
-
 }
-/* ===== HERO MODERN ===== */
+  
+  /* ===== HERO MODERN ===== */
 .hero {
   height: 100vh;
   display: flex;
