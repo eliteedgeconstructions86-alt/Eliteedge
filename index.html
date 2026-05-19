@@ -22,226 +22,272 @@ body {
 }
 
 
-/* ===== MOBILE HEADER FIX ===== */
-@media (max-width: 768px){
+/* ===== HEADER ===== */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:12px 40px;
+  box-sizing:border-box;
+
+  background:rgba(30,42,56,0.92);
+  backdrop-filter:blur(10px);
+
+  transition:0.3s ease;
+}
+
+/* SHRINK EFFECT */
+header.shrink{
+  padding:8px 30px;
+  background:rgba(30,42,56,0.96);
+  box-shadow:0 5px 25px rgba(0,0,0,0.4);
+}
+
+/* BRAND */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+
+  min-width:0;
+}
+
+.logo{
+  height:85px;
+  width:auto;
+  transition:0.3s;
+}
+
+header.shrink .logo{
+  height:60px;
+}
+
+.brand-text h2{
+  margin:0;
+  font-size:28px;
+  color:#fff;
+  line-height:1.1;
+}
+
+.brand-text span{
+  font-size:15px;
+  color:#ddd;
+}
+
+/* NAVIGATION */
+.nav{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.nav a{
+  color:#fff;
+  text-decoration:none;
+  font-size:15px;
+  transition:0.3s;
+  position:relative;
+  white-space:nowrap;
+}
+
+.nav a:hover{
+  color:#f4b400;
+}
+
+.nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0%;
+  height:2px;
+  background:#f4b400;
+  transition:0.3s;
+}
+
+.nav a:hover::after,
+.nav a.active::after{
+  width:100%;
+}
+
+.nav a.active{
+  color:#f4b400;
+}
+
+/* BROCHURE BUTTON */
+.brochure-btn{
+  background:#f4b400;
+  color:#000 !important;
+  padding:8px 14px;
+  border-radius:30px;
+  font-weight:600;
+}
+
+/* PHONE NUMBER */
+.top-contact{
+  margin-left:20px;
+  white-space:nowrap;
+  font-size:14px;
+  font-weight:600;
+}
+
+.top-contact a{
+  color:#fff;
+  text-decoration:none;
+}
+
+.top-contact a:hover{
+  color:#f4b400;
+}
+
+/* HAMBURGER */
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width:768px){
 
   header{
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:10px 12px;
-    box-sizing:border-box;
-
-    background: rgba(30,42,56,0.95);
+    padding:10px 15px;
+    height:auto;
+    flex-wrap:wrap;
   }
 
-  /* LOGO AREA */
   .brand{
-    display:flex;
-    align-items:center;
-    gap:8px;
-
-    max-width:65%;
+    width:auto;
+    gap:10px;
   }
 
   .logo{
-    height:50px;
+    height:55px;
   }
 
   .brand-text h2{
-    font-size:16px;
-    line-height:1.1;
+    font-size:18px;
   }
 
   .brand-text span{
-    font-size:10px;
+    font-size:11px;
   }
 
   /* PHONE NUMBER */
   .top-contact{
     position:absolute;
-    right:50px;
-    top:18px;
-
+    right:55px;
+    top:22px;
     font-size:10px;
-    white-space:nowrap;
   }
 
   /* HAMBURGER */
   .menu-toggle{
     display:block;
     position:absolute;
-    right:12px;
-    top:16px;
-
-    font-size:24px;
+    right:15px;
+    top:15px;
   }
 
   /* MOBILE MENU */
- 
+  #mobileMenu{
+    position:absolute;
+    top:75px;
+    left:0;
+    width:100%;
+
+    background:rgba(30,42,56,0.98);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    max-height:0;
+    overflow:hidden;
+
+    transition:0.4s ease;
+  }
 
   #mobileMenu.active{
-    max-height:400px;
+    max-height:500px;
   }
 
   #mobileMenu a{
     width:100%;
+    padding:15px;
     text-align:center;
-    padding:15px 0;
-    border-bottom:1px solid rgba(255,255,255,0.1);
+    border-bottom:1px solid rgba(255,255,255,0.08);
   }
 
-  /* HERO SPACING */
+  /* HERO FIX */
   .hero{
     margin-top:90px;
+    padding:40px 15px;
+    height:auto;
   }
-}
-/* SHRINK EFFECT */
-header.shrink {
-  padding: 8px 30px;
-  background: rgba(30, 42, 56, 0.9);
-  box-shadow: 0 5px 25px rgba(0,0,0,0.4);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-  
-/* NAV */
 
-.top-contact{
-  color:#fff;
-  font-size:13px;
-  font-weight:600;
+  .hero-content{
+    width:100%;
+    padding:25px 18px;
+    border-radius:20px;
+  }
 
-  white-space:nowrap;
+  .hero-logo{
+    width:180px;
+  }
 
-  margin-left:10px;
+  .hero-content h1{
+    font-size:24px;
+  }
 
-  flex-shrink:1;
-}
+  .hero-content p{
+    font-size:14px;
+  }
 
-.top-contact a{
-  color:#fff;
-  text-decoration:none;
-}
+  .hero-buttons{
+    flex-direction:column;
+    gap:10px;
+  }
 
-/* MOBILE */
+  .btn{
+    width:100%;
+    text-align:center;
+    box-sizing:border-box;
+  }
 
+  /* SECTION */
+  .section{
+    padding:50px 15px;
+  }
 
-}
-.top-contact a{
-  color:#fff;
-  text-decoration:none;
-}
+  .section h2{
+    font-size:24px;
+  }
 
-.top-contact:hover{
-  color:#f4b400;
-  transition:0.3s;
-}
+  /* GALLERY */
+  .gallery{
+    grid-template-columns:1fr;
+  }
 
-  
-.nav{
-  display:flex;
-  align-items:center;
-  gap:10px;
-
-  flex-wrap:nowrap;
-}
-
-nav a {
-  color:#fff;
-  margin-left:20px;
-  text-decoration:none;
-  font-size:15px;
-  position:relative;
-  transition:0.3s;
-   white-space: nowrap; 
+  /* FORM */
+  form input,
+  form textarea{
+    width:100%;
+    margin:8px 0;
+    box-sizing:border-box;
+  }
 
 }
-
-  .nav a.active {
-  color: #f4b400;
-}
-
-/* underline effect */
-.nav a.active::after {
-  width: 100%;
-}
-header.shrink .nav a {
-  font-size: 14px;
-}
-  
-.nav a::after {
-  content:"";
-  position:absolute;
-  width:0%;
-  height:2px;
-  left:0;
-  bottom:-5px;
-  background:#f4b400;
-  transition:0.4s ease;
-   
-}
-
-.nav a:hover::after { width:100%; }
-  .nav a.active::after {
-  width:100%;
-}
-
-  .nav a.active {
-  color:#f4b400;
-}
-nav a:hover { color:#f4b400; }
-
-/* LOGO */
-.brand {
-  display:flex;
-  align-items:center;
-  gap:15px;
-}
-
-.logo {
-  height: 95px;
-  width: auto;
-  object-fit: contain;
-  padding: 0;
-  background: transparent;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-header.shrink .logo {
-  height: 60px;
-}
-  
-  /* BRAND TEXT (FIXED SIZE) */
-.brand-text h2 {
-  margin: 0;
-  font-size: 28px;
-  font-weight: bold;
-  color: #fff;
-  letter-spacing: 0.5px;
-   transition: 0.3s;
-}
-
-.brand-text span {
-  font-size: 16px;
-  color: #ddd;
-   transition: 0.3s;
-}
-
-  header.shrink .brand-text h2 {
-  font-size: 24px;
-}
-
-header.shrink .brand-text span {
-  font-size: 16px;
-}
-
 /* ===== HERO MODERN ===== */
 .hero {
   height: 100vh;
