@@ -85,16 +85,33 @@ header.shrink .logo{
 .header-right{
   display:flex;
   align-items:center;
-  gap:14px;   /* reduced */
-  flex-wrap:wrap;
+  gap:12px;
+  flex:1;
+  justify-content:flex-end;
+  min-width:0;
 }
 
 /* NAV */
 .nav{
   display:flex;
   align-items:center;
-  gap:14px;
-   flex-wrap:wrap; 
+  gap:12px;
+  flex-wrap:nowrap;
+}
+
+/* NAV LINKS */
+.nav a{
+  font-size:14px;
+  white-space:nowrap;
+}
+
+/* PHONE */
+.top-contact{
+  white-space:nowrap;
+  font-size:13px;
+  font-weight:600;
+  margin-left:10px;
+  flex-shrink:0;
 }
 
 .nav a{
