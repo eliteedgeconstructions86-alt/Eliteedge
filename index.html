@@ -52,10 +52,33 @@ header.shrink {
 
 .top-contact{
   color:#fff;
-  font-size:15px;
+  font-size:14px;
   font-weight:600;
-  margin-left:20px;
+
+  margin-left:15px;
+  margin-right:40px;
+
   white-space:nowrap;
+
+  display:flex;
+  align-items:center;
+
+  flex-shrink:0;
+}
+
+/* MOBILE FIX */
+@media (max-width:768px){
+
+  .top-contact{
+    position:absolute;
+    top:18px;
+    right:55px;
+
+    font-size:11px;
+
+    margin:0;
+  }
+
 }
 
 .top-contact a{
