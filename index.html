@@ -21,25 +21,101 @@ body {
   scroll-behavior: smooth;
 }
 
-/* ===== HEADER (GLASS) ===== */
-/* ===== PREMIUM STICKY HEADER ===== */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* ===== MOBILE HEADER FIX ===== */
+@media (max-width: 768px){
 
-  padding: 10px 15px;
-  box-sizing: border-box;
+  header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
 
-  background: rgba(30, 42, 56, 0.7);
-  backdrop-filter: blur(10px);
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
 
-  overflow: hidden;
+    padding:10px 12px;
+    box-sizing:border-box;
+
+    background: rgba(30,42,56,0.95);
+  }
+
+  /* LOGO AREA */
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    max-width:65%;
+  }
+
+  .logo{
+    height:50px;
+  }
+
+  .brand-text h2{
+    font-size:16px;
+    line-height:1.1;
+  }
+
+  .brand-text span{
+    font-size:10px;
+  }
+
+  /* PHONE NUMBER */
+  .top-contact{
+    position:absolute;
+    right:50px;
+    top:18px;
+
+    font-size:10px;
+    white-space:nowrap;
+  }
+
+  /* HAMBURGER */
+  .menu-toggle{
+    display:block;
+    position:absolute;
+    right:12px;
+    top:16px;
+
+    font-size:24px;
+  }
+
+  /* MOBILE MENU */
+  #mobileMenu{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+
+    background:rgba(30,42,56,0.98);
+
+    flex-direction:column;
+
+    max-height:0;
+    overflow:hidden;
+
+    transition:0.4s ease;
+  }
+
+  #mobileMenu.active{
+    max-height:400px;
+  }
+
+  #mobileMenu a{
+    width:100%;
+    text-align:center;
+    padding:15px 0;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+  }
+
+  /* HERO SPACING */
+  .hero{
+    margin-top:90px;
+  }
 }
 /* SHRINK EFFECT */
 header.shrink {
