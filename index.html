@@ -1583,6 +1583,106 @@ line-height: 1.5;
   margin-top: 5px;
   margin-bottom: 10px;
 }
+
+/* ===== PREMIUM HERO UPGRADE ===== */
+
+.hero-content {
+  max-width: 780px;
+  padding: 50px 40px;
+  border-radius: 28px;
+
+  background: rgba(15, 25, 35, 0.55);
+  backdrop-filter: blur(28px);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  box-shadow:
+    0 30px 90px rgba(0,0,0,0.55),
+    inset 0 0 60px rgba(255,255,255,0.05);
+
+  text-align: center;
+}
+
+/* LOGO — make it premium focal point */
+.hero-logo {
+  width: 220px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 10px 25px rgba(0,0,0,0.6))
+          brightness(1.25);
+}
+
+/* HEADLINE — luxury typography */
+.hero-content h1 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  margin-bottom: 12px;
+
+  background: linear-gradient(90deg, #ffffff, #f4d03f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+/* SUB TEXT — softer, premium feel */
+.hero-content p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 25px;
+}
+
+/* BUTTONS — cleaner spacing */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 15px;
+}
+
+.hero-mini {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 13px;
+}
+
+.hero-mini a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-mini a:hover {
+  color: #f4b400;
+}
+
+/* BUTTON polish */
+.btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.primary {
+  background: linear-gradient(135deg, #f4b400, #ffcc33);
+  color: #000;
+}
+
+.secondary {
+  border: 1px solid rgba(255,255,255,0.5);
+  color: white;
+  background: transparent;
+}
+
+.primary:hover,
+.secondary:hover {
+  transform: translateY(-3px);
+}
+
+  
 </style>
 
 </head>
