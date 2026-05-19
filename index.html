@@ -335,11 +335,24 @@ color:#1e2a38;
   content: "";
   position: absolute;
   inset: 0;
-  background: url('background.jpg') center/cover no-repeat;
-  filter: brightness(1.35) contrast(1.1) saturate(1.1);
-   animation: zoomBg 20s infinite alternate;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(255,255,255,0.15),
+      rgba(0,0,0,0.15)
+    ),
+    url('background.jpg') center/cover no-repeat;
+
+  filter:
+    brightness(1.15)
+    contrast(1.08)
+    saturate(1.15);
+
+  animation: zoomBg 20s infinite alternate;
+
   z-index: -2;
-  }
+}
 
 .hero::after {
   content: "";
