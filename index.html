@@ -1836,8 +1836,9 @@ nav a:hover::after{
   top:0;
   left:0;
   background:radial-gradient(circle at top right,
-  rgba(250,204,21,0.15),transparent 35%);
-  z-index:1;
+  rgba(250,204,21,0.12),transparent 35%);
+  z-index:0;
+  pointer-events:none;
 }
 
 /* FLOATING SHAPES */
@@ -1845,8 +1846,10 @@ nav a:hover::after{
   position:absolute;
   border-radius:50%;
   filter:blur(10px);
-  opacity:0.35;
+  opacity:0.25;
   animation:floatAnim 6s ease-in-out infinite;
+  z-index:0;
+  pointer-events:none;
 }
 
 .shape1{
