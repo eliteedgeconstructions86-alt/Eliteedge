@@ -98,24 +98,26 @@ header.shrink .logo{
 .header-right{
   display:flex;
   align-items:center;
-  gap:25px;
-  flex:1;
   justify-content:flex-end;
-  min-width:0;
+  gap:18px;
 }
 
-/* NAV */
+/* NAVIGATION */
 .nav{
   display:flex;
   align-items:center;
-  gap:10px;
-  flex-wrap:nowrap;
+  gap:18px;
 }
 
 /* NAV LINKS */
 .nav a{
+  color:#1e2a38;
+  text-decoration:none;
   font-size:14px;
+  font-weight:500;
   white-space:nowrap;
+  transition:0.3s;
+  position:relative;
 }
 
 /* PHONE */
@@ -123,11 +125,28 @@ header.shrink .logo{
   white-space:nowrap;
   font-size:13px;
   font-weight:600;
-  margin-left:10px;
-  flex-shrink:0;
 }
 
-.nav a{
+/* DESKTOP FIX */
+@media (min-width:769px){
+
+  header{
+    padding:12px 35px;
+  }
+
+  .brand{
+    flex-shrink:0;
+  }
+
+  .header-right{
+    flex-shrink:0;
+  }
+
+  .nav{
+    flex-wrap:nowrap;
+  }
+}   
+  .nav a{
 color:#1e2a38;
   text-decoration:none;
   font-size:14px;
