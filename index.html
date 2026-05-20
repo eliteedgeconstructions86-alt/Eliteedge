@@ -1731,7 +1731,88 @@ line-height: 1.5;
 </head>
 
 <body>
+<!-- ===== HEADER ===== -->
 
+<header>
+
+  <!-- LEFT -->
+  <div class="brand">
+
+    <a href="#home">
+      <img src="logo.png" class="logo" alt="Elite Edge Logo">
+    </a>
+
+    <div class="brand-text">
+      <h2>Elite Edge</h2>
+      <span>Constructions & Interiors</span>
+    </div>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="header-right">
+
+    <!-- DESKTOP NAV -->
+    <nav class="nav">
+
+      <a href="#home">Home</a>
+
+      <a href="#about">About</a>
+
+      <a href="#services">Services</a>
+
+      <a href="#projects">Projects</a>
+
+      <a href="#pricing">Pricing</a>
+
+      <a href="#contact">Contact</a>
+
+      <a href="EliteEdgeBrochure2026.pdf"
+         download
+         class="brochure-btn">
+         Brochure
+      </a>
+
+    </nav>
+
+    <!-- PHONE -->
+    <div class="top-contact">
+      <a href="tel:+917338910111">
+        📞 +91 73389 10111
+      </a>
+    </div>
+
+    <!-- MOBILE MENU BUTTON -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      ☰
+    </div>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu">
+
+    <a href="#home" onclick="toggleMenu()">Home</a>
+
+    <a href="#about" onclick="toggleMenu()">About</a>
+
+    <a href="#services" onclick="toggleMenu()">Services</a>
+
+    <a href="#projects" onclick="toggleMenu()">Projects</a>
+
+    <a href="#pricing" onclick="toggleMenu()">Pricing</a>
+
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+
+    <a href="EliteEdgeBrochure2026.pdf"
+       download
+       onclick="toggleMenu()">
+       Download Brochure
+    </a>
+
+  </div>
+
+</header>
 
 
 <section class="hero" id="home">
