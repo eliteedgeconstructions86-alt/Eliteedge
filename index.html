@@ -568,7 +568,30 @@ rgba(255,255,255,0.05)
   transition: all 0.6s ease;
    padding: 70px 20px;  
 }
+.section{
+  position:relative;
+}
 
+.section::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+
+  width:120px;
+  height:2px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      #f4b400,
+      transparent
+    );
+
+  opacity:0.4;
+}
 /* ===== ACHIEVEMENT SECTION ===== */
 
 .achievement-section{
